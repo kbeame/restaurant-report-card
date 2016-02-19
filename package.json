@@ -1,0 +1,29 @@
+{
+  "name": "restaurant-report-card",
+  "version": "1.0.0",
+  "description": "Help the public inform their dining decisions based on inspection history",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kbeame/restaurant-report-card.git"
+  },
+  "keywords": [
+    "report",
+    "food",
+    "safty"
+  ],
+  "author": "Kat Beame, Ben Harding, Caleb Sattgast",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kbeame/restaurant-report-card/issues"
+  },
+  "homepage": "https://github.com/kbeame/restaurant-report-card#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-request-proxy": "^1.0.10"
+  }
+}
