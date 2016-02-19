@@ -2,7 +2,8 @@ README.md
 index.html
 .eslintignore
 .eslintrc
-style/
-vendor/
+style/**
+vendor/**
 server.js
 .gitignore
+node_modules
