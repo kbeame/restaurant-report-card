@@ -6,6 +6,30 @@
   }
   Inspection.all =[];
 
+  Inspection.createTable = function(callback) {
+    webDB.execute(
+      'CREATE TABLE IF NOT EXISTS recentInspect (' +
+      'id INTEGER PRIMARY KEY, ' +
+      'name VARCHAR(255), ' +
+      'inspection_date DATETIME, ' +
+      'inspection_score INTEGER, ' +
+      'address TEXT);',
+      callback
+    );
+  };
+
+  Inspection.prototype.insertData = function(callback) {
+    webDB.execute(
+      [
+        {
+          'sql': 'INSERT INTO recentInspect (name, inspection_date, inspection_score, address) VALUES (?, ?, ?, ?);',
+          'data': [this.name, this.inspection_date, this.inspection_score, this.address],
+        }
+      ],
+      callback
+    );
+  };
+
   Inspection.requestInspectionData = function(callback) {
     // $.get('https://data.kingcounty.gov/resource/gkhn-e8mn.json')
     //   .done(function(data, message, xhr) {
@@ -30,18 +54,7 @@
     });
   };
 
-  Inspection.createTable = function(callback) {
-    webDB.execute(
-      'CREATE TABLE IF NOT EXISTS recentInspect (' +
-        'id INTEGER PRIMARY KEY, ' +
-        'name VARCHAR(255), ' +
-        'inspection_date DATETIME, ' +
-        'inspection_score INTEGER, ' +
-        'address TEXT);',
-      callback
-    );
-  };
 
   Inspection.requestInspectionData(Inspection.with);
-  module.inspection = inspection;
+  module.Inspection = Inspection;
 })(window);
