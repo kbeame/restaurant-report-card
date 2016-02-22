@@ -1,8 +1,12 @@
 (function(module) {
-  var inspection = {};
-  inspection.all =[];
+  function Inspection (options) {
+    Object.keys(options).forEach(function(element, index, keys){
+      this[element] = options[element];
+    },this);
+  }
+  Inspection.all =[];
 
-  inspection.requestInspectionData = function(callback) {
+  Inspection.requestInspectionData = function(callback) {
     // $.get('https://data.kingcounty.gov/resource/gkhn-e8mn.json')
     //   .done(function(data, message, xhr) {
     //     inspection.all = data;
@@ -13,19 +17,19 @@
       success: function(data, message, xhr){
         console.log(xhr);
         console.log(data);
-        inspection.all = data;
+        Inspection.all = data;
       }
     });
   };
 
-  inspection.with = function(attr) {
+  Inspection.with = function(attr) {
     console.log('inspection function');
-    return inspection.all.filter(function(inspection){
+    return Inspection.all.filter(function(inspection){
       return inspection[attr];
-      console.log(inspection.all);
+      console.log(Inspection.all);
     });
   };
 
-  inspection.requestInspectionData(inspection.with);
+  Inspection.requestInspectionData(Inspection.with);
   module.inspection = inspection;
 })(window);
