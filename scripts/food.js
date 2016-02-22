@@ -30,6 +30,18 @@
     });
   };
 
+  Inspection.createTable = function(callback) {
+    webDB.execute(
+      'CREATE TABLE IF NOT EXISTS recentInspect (' +
+        'id INTEGER PRIMARY KEY, ' +
+        'name VARCHAR(255), ' +
+        'inspection_date DATETIME, ' +
+        'inspection_score INTEGER, ' +
+        'address TEXT);',
+      callback
+    );
+  };
+
   Inspection.requestInspectionData(Inspection.with);
   module.inspection = inspection;
 })(window);
