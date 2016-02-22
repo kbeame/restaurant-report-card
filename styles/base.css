@@ -1,0 +1,96 @@
+body {
+  max-width: 100%;
+  font-family: 'Maven Pro', sans-serif;
+  background: url(http://www.maschigokae.com/portfolio/images/profile/commercial-kitchen-stock.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 100%;
+  background: #373737;
+}
+
+.header-background {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#main-logo {
+  max-width: 90px;
+  max-height: 110px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+#webapp-title {
+    color: #e6590c;
+    font-family: 'Crete Round', serif;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    /*background: rgba(0, 0, 0, 0.2);*/
+}
+
+.spacing {
+  color: white;
+  letter-spacing: -1px;
+}
+
+.nav-block {
+  display: flex;
+  align-items: center;
+  background: #e6590c;
+  padding-right: 30px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+nav ul li {
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-blurb-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 900px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.6);
+  margin-bottom: 15px;
+}
+
+#webapp-mission-header {
+  font-family: 'Maven Pro', sans-serif; font-weight: 400;
+  text-align: center;
+  color: white;
+}
+
+.search-box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 40px;
+  background: white;
+  margin-top: 15px;
+
+}
