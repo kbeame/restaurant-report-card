@@ -1,0 +1,32 @@
+#about {
+  position: relative;
+}
+
+#about-bear {
+  position: absolute;
+  width: 300px;
+  left: 150px;
+  top: -400px;
+}
+
+#about-bear.in-view {
+  top: 100px;
+}
+
+#about-glasses {
+  position: absolute;
+  width: 360px;
+  top: -300px;
+  left: 160px;
+  -webkit-transition: 3s ease-in-out;
+  -moz-transition: 3s ease-in-out;
+  -o-transition: 3s ease-in-out;
+  transition: 3s ease-in-out;
+}
+.slide-down {
+  -webkit-transform: translate(0,350px);
+  -moz-transform: translate(0,350px);
+  -o-transform: translate(0,350px);
+  -ms-transform: translate(0,350px);
+  transform: translate(0,350px);
+}
