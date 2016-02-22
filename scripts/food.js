@@ -11,15 +11,15 @@
     //   .done(function(data, message, xhr) {
     //     inspection.all = data;
     //   }).done(callback);
-    $.ajax({
-      type: 'GET',
-      url: 'data/resource/gkhn-e8mn.json?$select=name,max(inspection_date)&$group=name&$order=name&$limit=50000',
-      success: function(data, message, xhr){
-        console.log(xhr);
-        console.log(data);
+    $.get('https://data.kingcounty.gov/resource/gkhn-e8mn.json?$select=name,inspection_date,inspection_score,address&$order=inspection_date%20DESC&inspection_type=Routine%20Inspection/Field%20Review&name=' + restName + '&$limit=1')
+      .done(function(data, message, xhr) {
         Inspection.all = data;
-      }
-    });
+        data.forEach(function (item) {
+          var total = new Inspection(item);
+          console.log(item);
+          total.insertData();
+        });
+      }).done(callback);
   };
 
   Inspection.with = function(attr) {
