@@ -13,7 +13,8 @@
       'name VARCHAR(255), ' +
       'inspection_date DATETIME, ' +
       'inspection_score INTEGER, ' +
-      'address TEXT);',
+      'latitude DECIMAL(18,12), ' +
+      'longitude DECIMAL(18,12));',
       callback
     );
   };
@@ -22,8 +23,8 @@
     webDB.execute(
       [
         {
-          'sql': 'INSERT INTO recentInspect (name, inspection_date, inspection_score, address) VALUES (?, ?, ?, ?);',
-          'data': [this.name, this.inspection_date, this.inspection_score, this.address],
+          'sql': 'INSERT INTO recentInspect (name, inspection_date, inspection_score, latitude, longitude) VALUES (?, ?, ?, ?, ?);',
+          'data': [this.name, this.inspection_date, this.inspection_score, this.latitude, this.longitude],
         }
       ],
       callback
@@ -34,7 +35,7 @@
 
   Inspection.requestInspectionData = function(place, callback) {
 
-    $.get('https://data.kingcounty.gov/resource/gkhn-e8mn.json?$select=name,inspection_date,inspection_score,address&$order=inspection_date%20DESC&inspection_type=Routine%20Inspection/Field%20Review&name=' + place + '&$limit=1')
+    $.get('/data/resource/gkhn-e8mn.json?$select=name,inspection_date,inspection_score,latitude,longitude&$order=inspection_date%20DESC&inspection_type=Routine%20Inspection/Field%20Review&$q=' + place + '&$limit=1')
       .done(function(data, message, xhr) {
         Inspection.all = data;
         data.forEach(function (item) {
@@ -57,6 +58,7 @@
   $('.restaurant-search').on('submit', function(event) {
     event.preventDefault();
     var restName = $('#search-input').val();
+    restName = restName.replace(/[^\w\s]/gi, '');
     console.log('This is the restName:' + restName);
     Inspection.requestInspectionData(restName, Inspection.with);
   });
