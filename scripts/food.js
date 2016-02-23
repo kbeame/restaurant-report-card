@@ -30,17 +30,17 @@
     );
   };
 
-  Inspection.requestInspectionData = function(callback) {
-    // $.get('https://data.kingcounty.gov/resource/gkhn-e8mn.json')
-    //   .done(function(data, message, xhr) {
-    //     inspection.all = data;
-    //   }).done(callback);
-    $.get('https://data.kingcounty.gov/resource/gkhn-e8mn.json?$select=name,inspection_date,inspection_score,address&$order=inspection_date%20DESC&inspection_type=Routine%20Inspection/Field%20Review&name=' + restName + '&$limit=1')
+  Inspection.createTable();
+
+  Inspection.requestInspectionData = function(place, callback) {
+
+    $.get('https://data.kingcounty.gov/resource/gkhn-e8mn.json?$select=name,inspection_date,inspection_score,address&$order=inspection_date%20DESC&inspection_type=Routine%20Inspection/Field%20Review&name=' + place + '&$limit=1')
       .done(function(data, message, xhr) {
         Inspection.all = data;
         data.forEach(function (item) {
           var total = new Inspection(item);
-          console.log(item);
+          console.log('item:' + item);
+          //cache the data into the currently empty array
           total.insertData();
         });
       }).done(callback);
@@ -54,7 +54,12 @@
     });
   };
 
+  $('.restaurant-search').on('submit', function(event) {
+    event.preventDefault();
+    var restName = $('#search-input').val();
+    console.log('This is the restName:' + restName);
+    Inspection.requestInspectionData(restName, Inspection.with);
+  });
 
-  Inspection.requestInspectionData(Inspection.with);
   module.Inspection = Inspection;
 })(window);
