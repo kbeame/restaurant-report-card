@@ -4,7 +4,7 @@
       this[element] = options[element];
     },this);
   }
-  Inspection.all =[];
+  Inspection.current =[];
 
   Inspection.createTable = function(callback) {
     webDB.execute(
@@ -37,7 +37,7 @@
 
     $.get('/data/resource/gkhn-e8mn.json?$select=name,inspection_date,inspection_score,latitude,longitude&$order=inspection_date%20DESC&inspection_type=Routine%20Inspection/Field%20Review&$q=' + place + '&$limit=1')
       .done(function(data, message, xhr) {
-        Inspection.all = data;
+        Inspection.current = data;
         data.forEach(function (item) {
           var total = new Inspection(item);
           console.log('item:' + item);
@@ -49,9 +49,9 @@
 
   Inspection.with = function(attr) {
     console.log('inspection function');
-    return Inspection.all.filter(function(inspection){
+    return Inspection.current.filter(function(inspection){
       return inspection[attr];
-      console.log(Inspection.all);
+      console.log(Inspection.current);
     });
   };
 
