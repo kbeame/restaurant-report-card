@@ -55,6 +55,35 @@
     });
   };
 
+  $('#search-input').autocomplete({
+    source: function(request, response) {
+      $.ajax({
+        url: 'https://data.kingcounty.gov/resource/gkhn-e8mn.json?$select=name&$group=name&$order=name&$limit=50000',
+        dataType: 'json',
+        data: {
+          q: request.name
+        },
+        success: function(data) {
+          response(data);
+        }
+      });
+    },
+    minLength: 3,
+    select: function (event, ui) {
+      console.log( ui.item ?
+          'Selected: ' + ui.item.label :
+          'Nothing selected, input was ' + this.text);
+    },
+    open: function() {
+      $(this).removeClass('ui-corner-all').addClass('ui-corner-top');
+    },
+    close: function() {
+      $(this).removeClass('ui-corner-top').addClass('ui-corner-all');
+    }
+  });
+
+
+
   $('.restaurant-search').on('submit', function(event) {
     event.preventDefault();
     var restName = $('#search-input').val();

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="vendor/style/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700|Crete+Round:400,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="vendor/style/jquery-ui.structure.css">
+    <link rel="stylesheet" type="text/css" href="vendor/style/jquery-ui.theme.css">
     <link rel="stylesheet" type="text/css" href="styles/base.css">
     <link rel="stylesheet" type="text/css" href="styles/layout.css">
   </head>
@@ -30,7 +32,7 @@
       <div class="about-blurb-container">
         <h1 id="webapp-mission-header">Search public health inspection results<br>for hundreds of restaurants in King County.</h1>
       </div>
-      <div class="search-box-container">
+      <div class="search-box-container ui-widget">
         <form class="restaurant-search" type="submit" method="get">
           <input id="search-input" type="text" name="Restaurant Search" placeholder="Type a restaurant name here">
         </form>
@@ -42,6 +44,7 @@
     </main>
   <!-- Vendor Scripts -->
   <script src="/vendor/scripts/jquery.js"></script>
+  <script src="/vendor/scripts/jquery-ui.js"></script>
   <script src="/vendor/scripts/handlebars.js"></script>
   <script src="/vendor/scripts/html5sql.js"></script>
   <script src="/vendor/scripts/webdb.js"></script>
