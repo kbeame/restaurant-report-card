@@ -1,10 +1,9 @@
 (function(module) {
   var mapInspection = {};
 
-  var map;
   mapInspection.initMap = function() {
-    map = new google.maps.Map(document.getElementById('inspect-map'), {
-      center: {lat: parseFloat(Inspection.current[0].latitude), lng: parseFloat(Inspection.current[0].longitude)},
+    mapInspection.map = new google.maps.Map(document.getElementById('inspect-map'), {
+      center: {lat: 47.6097, lng: -122.3331},
       zoom: 18
     });
   };
