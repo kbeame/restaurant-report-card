@@ -44,6 +44,7 @@
           //cache the data into the currently empty array
           total.insertData();
         });
+        mapView.updateMap();
       }).done(callback);
   };
 
