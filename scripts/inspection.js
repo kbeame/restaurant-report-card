@@ -19,6 +19,16 @@
       callback
     );
   };
+  Inspection.buildNames = function (anything) {
+    $.get('/data/resource/gkhn-e8mn.json?$select=name&$group=name&$order=name&$limit=50000')
+    .done(function(data, message, xhr) {
+      Inspection.names = data.map(function(element){
+        return element.name;
+      });
+      console.log('generated array for inspeciton.names');
+      anything();
+    });
+  };
 
   Inspection.prototype.insertData = function(callback) {
     webDB.execute(
@@ -56,7 +66,7 @@
       console.log(Inspection.current);
     });
   };
-  
+
   Inspection.inputOptions = function() {
     $('#search-input').autocomplete({
       source: Inspection.names,
@@ -71,6 +81,6 @@
     console.log('This is the restName:' + restName);
     Inspection.requestInspectionData(restName, Inspection.with);
   });
-
+  Inspection.buildNames(Inspection.inputOptions);
   module.Inspection = Inspection;
 })(window);
