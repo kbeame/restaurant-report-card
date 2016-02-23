@@ -5,6 +5,7 @@
     },this);
   }
   Inspection.current =[];
+  Inspection.names =[];
 
   Inspection.createTable = function(callback) {
     webDB.execute(
@@ -53,6 +54,13 @@
     return Inspection.current.filter(function(inspection){
       return inspection[attr];
       console.log(Inspection.current);
+    });
+  };
+  
+  Inspection.inputOptions = function() {
+    $('#search-input').autocomplete({
+      source: Inspection.names,
+      minLength: 3
     });
   };
 
