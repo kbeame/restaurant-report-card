@@ -55,20 +55,23 @@
     });
   };
 
+
   $('#search-input').autocomplete({
     source: function(request, response) {
       $.ajax({
-        url: 'https://data.kingcounty.gov/resource/gkhn-e8mn.json?$select=name&$group=name&$order=name&$limit=50000',
-        dataType: 'json',
+        url: 'https://data.kingcounty.gov/resource/gkhn-e8mn',
         data: {
-          q: request.name
+          $q: request.term
         },
-        success: function(data) {
-          response(data);
-        }
+        dataType: 'json',
+      }).success(function(data) {
+        var results = $.map(data.items, function(id) {
+          return id.name;
+        });
+        response(results);
       });
     },
-    minLength: 3,
+    minLength:3,
     select: function (event, ui) {
       console.log( ui.item ?
           'Selected: ' + ui.item.label :
