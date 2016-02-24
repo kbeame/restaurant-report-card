@@ -63,6 +63,14 @@
       </section>
     </script>
 
+    <script id="history-template" type="text/x-handlebars-template">
+      <tr>
+        <td>{{inspection_date}}</td>
+        <td>{{inspection_score}}</td>
+        <td>{{violation_description}}</td>
+        <td>{{inspection_closed_business}}</td>
+      </tr>
+    </script>
 
   </head>
   <body>
@@ -100,7 +108,16 @@
         </div>
       </div>
       <section id="report-card">
-
+      </section>
+      <section id="inspection-history">
+        <table>
+          <tr>
+            <th>Date</th>
+            <th>Score</th>
+            <th>Rule Violated</th>
+            <th>Inspection Closed Business</th>
+          </tr>
+        </table>
       </section>
     </main>
   <!-- Vendor Scripts -->
