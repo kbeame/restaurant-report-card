@@ -23,3 +23,12 @@
 .severe {
   background-color: #ca0032;
 }
+
+#inspection-history {
+  background-color: white;
+  display: none;
+}
+
+#inspection-history table,tr,th,td {
+  border: 1px solid black;
+}
