@@ -44,18 +44,18 @@
       </section>
       <section class="results-main">
           <header>
-            <h1>name's Inspection Report Card</h1>
+            <h1>{{name}}'s Inspection Report Card</h1>
             <ul>
-              <li>Adress</li>
-              <li>city, WA, zip code</li>
-              <li>phone number</li>
+              <li>{{address}}</li>
+              <li>{{city}}, WA, {{zip_code}}</li>
+              <li>{{phone}}</li>
             </ul>
           </header>
           <article class="score">
             <img src="images/inspection-grade-png/doodle-smiley-icons-f.png">
             <div>
               <h4>Inspection Score</h4>
-              <h1>####</h1>
+              <h1>{{inspection_score}}</h1>
             </div>
           </article>
           <article id="inspect-map"></article>
@@ -100,7 +100,7 @@
         </div>
       </div>
       <section id="report-card">
-        
+
       </section>
     </main>
   <!-- Vendor Scripts -->
