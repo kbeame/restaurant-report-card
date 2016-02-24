@@ -11,6 +11,59 @@
     <link rel="stylesheet" type="text/css" href="styles/layout.css">
     <link rel="stylesheet" type="text/css" href="styles/module.css">
     <link rel="stylesheet" type="text/css" href="styles/about.css">
+
+    <script id="report-card-template" type="text/x-handlebars-template">
+      <section class="result-options">
+        <ul>
+          <li class="low">
+            <h2>LOW</h2>
+            <h4>Low risk of food contamination</h4>
+            <img src="images/inspection-grade-png/doodle-smiley-icons-a.png">
+          </li>
+          <li class="moderate">
+            <h2>MODERATE</h2>
+            <h4>Moderate risk of food contamination</h4>
+            <img src="images/inspection-grade-png/doodle-smiley-icons-b-plus.png">
+          </li>
+          <li class="elevated">
+            <h2>ELEVATED</h2>
+            <h4>Elevated risk of food contamination</h4>
+            <img src="images/inspection-grade-png/doodle-smiley-icons-b.png">
+          </li>
+          <li class="high">
+            <h2>HIGH</h2>
+            <h4>High risk of food contamination</h4>
+            <img src="images/inspection-grade-png/doodle-smiley-icons-c.png">
+          </li>
+          <li class="severe">
+            <h2>SEVERE</h2>
+            <h4>Severe risk of food contamination</h4>
+            <img src="images/inspection-grade-png/doodle-smiley-icons-f.png">
+          </li>
+        </ul>
+      </section>
+      <section class="results-main">
+          <header>
+            <h1>{{name}}'s Inspection Report Card</h1>
+            <ul>
+              <li>{{address}}</li>
+              <li>{{city}}, WA, {{zip_code}}</li>
+              <li>{{phone}}</li>
+            </ul>
+          </header>
+          <article class="score">
+            <img src="images/inspection-grade-png/doodle-smiley-icons-f.png">
+            <div>
+              <h4>Inspection Score</h4>
+              <h1>{{inspection_score}}</h1>
+            </div>
+          </article>
+          <article id="inspect-map"></article>
+          <button><a href="#">View Full Inspection History</a></button>
+      </section>
+    </script>
+
+
   </head>
   <body>
     <section id="about">
@@ -47,55 +100,8 @@
         </div>
       </div>
       <section id="report-card">
-        <section class="result-options">
-          <ul>
-            <li class="low">
-              <h2>LOW</h2>
-              <h4>Low risk of food contamination</h4>
-              <img src="images/inspection-grade-png/doodle-smiley-icons-a.png">
-            </li>
-            <li class="moderate">
-              <h2>MODERATE</h2>
-              <h4>Moderate risk of food contamination</h4>
-              <img src="images/inspection-grade-png/doodle-smiley-icons-b-plus.png">
-            </li>
-            <li class="elevated">
-              <h2>ELEVATED</h2>
-              <h4>Elevated risk of food contamination</h4>
-              <img src="images/inspection-grade-png/doodle-smiley-icons-b.png">
-            </li>
-            <li class="high">
-              <h2>HIGH</h2>
-              <h4>High risk of food contamination</h4>
-              <img src="images/inspection-grade-png/doodle-smiley-icons-c.png">
-            </li>
-            <li class="severe">
-              <h2>SEVERE</h2>
-              <h4>Severe risk of food contamination</h4>
-              <img src="images/inspection-grade-png/doodle-smiley-icons-f.png">
-            </li>
-          </ul>
-        </section>
-        <section class="results-main">
-            <header>
-              <h1>name's Inspection Report Card</h1>
-              <ul>
-                <li>Adress</li>
-                <li>city, WA, zip code</li>
-                <li>phone number</li>
-              </ul>
-            </header>
-            <article class="score">
-              <img src="images/inspection-grade-png/doodle-smiley-icons-f.png">
-              <div>
-                <h4>Inspection Score</h4>
-                <h1>####</h1>
-              </div>
-            </article>
-            <article id="inspect-map"></article>
-            <button><a href="#">View Full Inspection History</a></button>
-        </section>
-    </section>
+
+      </section>
     </main>
   <!-- Vendor Scripts -->
   <script src="/vendor/scripts/jquery.js"></script>
