@@ -60,6 +60,7 @@
           total.insertData();
         });
         $('#report-card').empty().append(inspectionView.displayResults(Inspection.current[0]));
+        inspectionView.filterResults(Inspection.current[0]);
         mapView.updateMap();
       }).done(callback);
   };
