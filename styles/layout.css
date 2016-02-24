@@ -1,0 +1,53 @@
+#report-card{
+  display: flex;
+  flex-direction: row;
+  border: 3px dotted yellow;
+}
+
+.result-options ul {
+  margin: 0px;
+  padding: 0px;
+}
+.result-options li {
+  list-style-type: none;
+  border: 3px dotted blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+h2:nth-child(1) {
+  margin: auto;
+}
+h4:nth-child(2) {
+  margin: auto;
+  padding: auto;
+}
+img:nth-child(3) {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.results-main {
+  border: 4px dotted purple;
+}
+
+.results-main header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.results-main header li {
+  list-style-type: none;
+  margin
+}
+.results-main header h1 {
+  margin-bottom: auto;
+  margin-top: auto;
+}
+.score {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
