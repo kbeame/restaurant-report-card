@@ -56,6 +56,7 @@
           total.insertData();
         });
         mapView.updateMap();
+        inspectionView.displayResults();
       }).done(callback);
   };
 
