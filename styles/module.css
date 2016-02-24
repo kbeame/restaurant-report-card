@@ -26,6 +26,7 @@
 
 #inspection-history {
   background-color: white;
+  display: none;
 }
 
 #inspection-history table,tr,th,td {
