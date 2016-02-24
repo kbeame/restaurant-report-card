@@ -24,7 +24,9 @@ h4:nth-child(2) {
   padding: auto;
 }
 img:nth-child(3) {
-  width: 30%;
+  display: block;
+  width: auto;
+  height: auto;
 }
 
 .results-main {

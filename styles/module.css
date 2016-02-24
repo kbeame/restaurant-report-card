@@ -3,3 +3,23 @@
   width: 400px;
   display: none;
 }
+
+.low {
+  background-color: #009a66;
+}
+
+.moderate {
+  background-color: #3566cd;
+}
+
+.elevated {
+  background-color: #fee101;
+}
+
+.high {
+  background-color: #ff6400;
+}
+
+.severe {
+  background-color: #ca0032;
+}
