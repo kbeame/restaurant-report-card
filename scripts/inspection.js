@@ -78,7 +78,7 @@
   $('.restaurant-search').on('submit', function(event) {
     event.preventDefault();
     var restName = $('#search-input').val();
-    restName = restName.replace(/[^\w\s]/gi, '');
+    restName = restName.replace(/[^\w\s]/gi, ' ');
     console.log('This is the restName:' + restName);
     Inspection.requestInspectionData(restName, Inspection.with);
   });
