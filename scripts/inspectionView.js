@@ -23,7 +23,6 @@
       $('results-main').attr('class', 'severe');
       $('.score img').attr('src', 'images/inspection-grade-png/doodle-smiley-icons-f.png');
     }
-
   };
 
   module.inspectionView = inspectionView;
