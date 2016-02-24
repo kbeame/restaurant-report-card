@@ -1,0 +1,29 @@
+#report-card{
+  display: flex;
+  flex-direction: row;
+  border: 3px dotted yellow;
+}
+
+.result-options ul {
+  margin: 0px;
+  padding: 0px;
+}
+.result-options li {
+  list-style-type: none;
+  border: 3px dotted blue;
+}
+.results-main {
+  border: 4px dotted purple;
+}
+
+.results-main header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.results-main header li {
+  list-style-type: none;
+}
+.results-main header h1 {
+  margin-bottom: 0px;
+}
