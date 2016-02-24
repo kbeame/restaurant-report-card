@@ -1,3 +1,3 @@
-
+page('/', inspectionController.index); 
 
 page();
