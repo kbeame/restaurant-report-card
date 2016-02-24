@@ -81,7 +81,9 @@
     restName = restName.replace(/[^\w\s]/gi, ' ');
     console.log('This is the restName:' + restName);
     Inspection.requestInspectionData(restName, Inspection.with);
+    history.requestHistoryData(restName);
   });
   Inspection.buildNames(Inspection.inputOptions);
+
   module.Inspection = Inspection;
 })(window);
