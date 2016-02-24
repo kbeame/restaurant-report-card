@@ -57,7 +57,8 @@
           //cache the data into the currently empty array
           total.insertData();
         });
-        $('#report-card').empty().append(inspectionView.displayResults(Inspection.current[0]));
+  
+        $('#report-card').empty().append(inspectionView.displayResults(Inspection.current[0])).show().siblings().hide();
         inspectionView.filterResults(Inspection.current[0]);
         mapView.updateMap();
       }).done(callback);
