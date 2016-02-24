@@ -7,6 +7,7 @@
     $reportCard.empty();
     $reportCard.append($('<li>').text('Restaurant Name: ' + Inspection.current[0].name));
     $reportCard.append($('<li>').text('Violation Score: ' + Inspection.current[0].inspection_score));
+    $reportCard.append($('<li>').text('Violation Score: ' + Inspection.current[0].inspection_date));
     $('#report-card').css('background-color', 'green');
   };
 
