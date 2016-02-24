@@ -1,4 +1,4 @@
-function(module){
+(function(module){
 
   var historyView = {};
 
@@ -7,4 +7,4 @@ function(module){
   };
 
   module.historyView = historyView;
-})(window);
+}) (window);

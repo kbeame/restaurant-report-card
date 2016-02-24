@@ -9,8 +9,5 @@
       // historyView.displayResults();
     }).done(callback);
   };
-
-
-
   module.history = history;
-})(window);
+}) (window);
