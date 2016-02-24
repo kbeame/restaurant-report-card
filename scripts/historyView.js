@@ -2,8 +2,10 @@
 
   var historyView = {};
 
-  historyView.displayResults = function() {
-    //handlebars compile
+  historyView.displayHistoryRow = function(result) {
+    var template = Handlebars.compile($('#history-template').text());
+
+    return template(result);
   };
 
   module.historyView = historyView;
