@@ -5,5 +5,5 @@
     $('#inspection-history').toggle();
   };
 
-  module.historyController = historyController();
-});
+  module.historyController = historyController;
+})(window);
