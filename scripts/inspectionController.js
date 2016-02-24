@@ -13,6 +13,6 @@
     });
     Inspection.buildNames(Inspection.inputOptions);
   };
-  
+
   module.inspectionController = inspectionController;
 })(window);
