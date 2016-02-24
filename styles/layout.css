@@ -29,20 +29,20 @@ img:nth-child(3) {
   height: auto;
 }
 
-.results-main {
+#results-main {
   border: 4px dotted purple;
 }
 
-.results-main header {
+#results-main header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: inherit;
 }
-.results-main header li {
+#results-main header li {
   list-style-type: none;
-  margin
 }
-.results-main header h1 {
+#results-main header h1 {
   margin-bottom: auto;
   margin-top: auto;
 }
