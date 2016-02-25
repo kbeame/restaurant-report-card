@@ -76,7 +76,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 900px;
+  width: 940px;
   height: 150px;
   background: rgba(0, 0, 0, 0.6);
   margin-bottom: 15px;
@@ -118,7 +118,7 @@ form input {
   font-weight: 800;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 940px) {
   header {
     display: flex;
     flex-direction: column;
@@ -133,14 +133,8 @@ form input {
     justify-content: center;
     background: #e6590c;
     width: 100%;
-
+    height: 30px;
   }
-  /*.header-background {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }*/
   .about-blurb-container {
     height: 90px;
     max-width: 100%;
@@ -148,5 +142,4 @@ form input {
   .about-blurb-container h1 {
     font-size: 1.2em;
   }
-
 }
