@@ -99,6 +99,13 @@ main {
 
 }
 
+.search-box-container form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
 form input {
   width: 300px;
   height: 20px;
@@ -112,6 +119,8 @@ form input {
   background: #e6590c;
   height: 40px;
   width: 80px;
+  border: 0px;
+  font-weight: 600;
 }
 
 .search-button p {
@@ -216,18 +225,25 @@ form input {
     align-items: center;
     justify-content: space-between;
     max-width: 100%;
-    height: 90px;
+    height: 98px;
     background: white;
     padding-top: 8px;
 
   }
 
   form input {
-    width: 300px;
+    width: 100%;
     height: 36px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 5px
+  }
+
+  .search-box-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 94%
   }
 
   .search-button {
@@ -236,7 +252,10 @@ form input {
     justify-content: center;
     background: #e6590c;
     height: 40px;
-    width: 100%;
+    width: 102%;
+    border: 0px;
+    margin-top: 3px;
+    font-weight: 600;
   }
 
   .search-button p {
