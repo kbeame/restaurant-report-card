@@ -63,6 +63,7 @@
           $('#report-card').empty().append(inspectionView.displayResults(Inspection.current[0])).show().siblings().hide();
           inspectionView.filterResults(Inspection.current[0]);
           mapView.updateMap();
+          history.replaceState(null, null, 'report-card');
         }
       }).done(callback);
   };
