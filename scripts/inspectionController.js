@@ -10,9 +10,11 @@
       console.log('This is the restName:' + restName);
       Inspection.requestInspectionData(restName, Inspection.with);
       historyInit.requestHistoryData(restName);
+      $('#search-input').val(' ');
     });
     Inspection.buildNames(Inspection.inputOptions);
     $('main').children().hide();
+    $('#search-input').focus();
     // may need to show later
   };
 
