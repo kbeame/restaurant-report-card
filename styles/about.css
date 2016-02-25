@@ -4,9 +4,9 @@
 
 #about-bear {
   position: absolute;
-  width: 300px;
-  left: 150px;
-  top: -400px;
+  width: 400px;
+  left: 20%;
+  top: -500px;
 }
 
 #about-bear.in-view {
@@ -15,9 +15,9 @@
 
 #about-glasses {
   position: absolute;
-  width: 360px;
-  top: -300px;
-  left: 160px;
+  width: 500px;
+  top: -408px;
+  left: 20%;
   -webkit-transition: 3s ease-in-out;
   -moz-transition: 3s ease-in-out;
   -o-transition: 3s ease-in-out;
