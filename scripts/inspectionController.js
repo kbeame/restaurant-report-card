@@ -13,6 +13,7 @@
     });
     Inspection.buildNames(Inspection.inputOptions);
     $('main').children().hide();
+    // may need to show later
   };
 
   module.inspectionController = inspectionController;
