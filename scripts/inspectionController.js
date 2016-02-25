@@ -10,7 +10,7 @@
       console.log('This is the restName:' + restName);
       Inspection.requestInspectionData(restName, Inspection.with);
       historyInit.requestHistoryData(restName);
-      $('#search-input').val(' ');
+      $('#search-input').val('');
     });
     Inspection.buildNames(Inspection.inputOptions);
     $('main').children().hide();
