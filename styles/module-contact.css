@@ -4,15 +4,28 @@
   justify-content: center;
   align-items: center;
   background-color: #838383;
-  border: 10px solid #373737
-  /*box-shadow: 0px 0px 10px #373737;*/
+  border: 10px solid #373737;
+  box-shadow: 0px 0px 10px #373737;
 }
 
 #contact p {
   width: 80%;
-  background: rgba(0, 0, 0, 0.6);
+  /*background: rgba(0, 0, 0, 0.6);*/
   margin-bottom: 15px;
   font-family: 'Maven Pro', sans-serif; font-weight: 400;
   text-align: center;
   color: white;
+}
+/*#contact h2,*/
+#contact div {
+  background-color: #373737;
+  color: #e6590c;
+  color: #e6590c;
+  font-family: 'Crete Round', serif;
+  letter-spacing: 3px;
+  border-radius: 15px;
+  padding: 2%;
+  margin: 1%;
+  border: 3px solid #e6590c;
+  box-shadow: 0px 0px 10px #373737;
 }
