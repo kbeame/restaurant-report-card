@@ -46,8 +46,6 @@
     );
   };
 
-  Inspection.createTable();
-
   Inspection.requestInspectionData = function(place, callback) {
 
     $.get('/data/resource/gkhn-e8mn.json?$select=name,inspection_date,inspection_score,address,city,zip_code,phone,latitude,longitude&$order=inspection_date%20DESC&inspection_type=Routine%20Inspection/Field%20Review&$q=' + place + '&$limit=1')
@@ -59,7 +57,8 @@
           //cache the data into the currently empty array
           total.insertData();
         });
-        $('#report-card').empty().append(inspectionView.displayResults(Inspection.current[0]));
+  
+        $('#report-card').empty().append(inspectionView.displayResults(Inspection.current[0])).show().siblings().hide();
         inspectionView.filterResults(Inspection.current[0]);
         mapView.updateMap();
       }).done(callback);
@@ -80,15 +79,15 @@
     });
   };
 
-  $('.restaurant-search').on('submit', function(event) {
-    event.preventDefault();
-    var restName = $('#search-input').val();
-    restName = restName.replace(/[^\w\s]/gi, ' ');
-    console.log('This is the restName:' + restName);
-    Inspection.requestInspectionData(restName, Inspection.with);
-    historyInit.requestHistoryData(restName);
-  });
-  Inspection.buildNames(Inspection.inputOptions);
+  // $('.restaurant-search').on('submit', function(event) {
+  //   event.preventDefault();
+  //   var restName = $('#search-input').val();
+  //   restName = restName.replace(/[^\w\s]/gi, ' ');
+  //   console.log('This is the restName:' + restName);
+  //   Inspection.requestInspectionData(restName, Inspection.with);
+  //   historyInit.requestHistoryData(restName);
+  // });
+
 
   module.Inspection = Inspection;
 })(window);

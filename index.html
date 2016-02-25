@@ -59,7 +59,7 @@
             </div>
           </article>
           <article id="inspect-map"></article>
-          <button><a href="#">View Full Inspection History</a></button>
+          <button><a href="/history">View Full Inspection History</a></button>
       </section>
     </script>
 
@@ -86,16 +86,14 @@
       <div class="nav-block">
         <nav>
           <ul>
-            <li>About the project</li>
-            <li>#</li>
-            <li>About the data</li>
-            <li>#</li>
-            <li>Contact</li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/project">About the Project</a></li>
+            <li><a href="/contact">Contact King County</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <main>
+    <section class='center-container'>
       <div class="about-blurb-container">
         <h1 id="webapp-mission-header">Search public health inspection results<br>for hundreds of restaurants in King County.</h1>
       </div>
@@ -107,6 +105,8 @@
           <p>Search!</p>
         </div>
       </div>
+    </section>
+    <main>
       <section id="report-card">
       </section>
       <section id="inspection-history">
@@ -122,6 +122,15 @@
           <tbody>
           </tbody>
         </table>
+      </section>
+      <section id="contact">
+        <h1>This is the contact section</h1>
+      </section>
+      <section id="project">
+        <h1>This is the PROJECT section</h1>
+      </seciton>
+      <section id="about">
+        <h1>This is the ABOUT section</h1>
       </section>
     </main>
   <!-- Vendor Scripts -->
@@ -143,9 +152,12 @@
   <!-- map scripts -->
   <script src="/scripts/map.js"></script>
   <script src="/scripts/mapView.js"></script>
-  <script src="/scripts/mapController.js"></script>
   <!-- about scripts -->
   <script src="/scripts/about.js"></script>
+  <script src="/scripts/aboutController.js"></script>
+  <!-- misc controllers -->
+  <script src="/scripts/projectController.js"></script>
+  <script src="/scripts/contactController.js"></script>
   <!-- routes -->
   <script src="/scripts/routes.js"></script>
   <!-- Google Maps API -->
