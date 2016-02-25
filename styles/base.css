@@ -117,3 +117,36 @@ form input {
 .search-button p {
   font-weight: 800;
 }
+
+@media only screen and (max-width: 900px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    background: #373737;
+  }
+  .nav-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e6590c;
+    width: 100%;
+
+  }
+  /*.header-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }*/
+  .about-blurb-container {
+    height: 90px;
+    max-width: 100%;
+  }
+  .about-blurb-container h1 {
+    font-size: 1.2em;
+  }
+
+}
