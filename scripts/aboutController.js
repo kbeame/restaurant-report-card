@@ -6,6 +6,7 @@
     $('#about-glasses').removeClass('slide-down');
     setTimeout(function () {
       $('#about-bear').removeClass('in-view');
+      $('#about-konami').hide();
     }, 3000);
   };
   module.aboutController = aboutController;

@@ -4,8 +4,11 @@
   aboutInit.aboutKonami = function () {
     $( window ).konami();
     $( window ).on('konami', function() {
+      $('#about-konami').show();
       $('#about-bear').attr('class', 'in-view');
-      $('#about-glasses').attr('class', 'slide-down');
+      setTimeout(function () {
+        $('#about-glasses').attr('class', 'slide-down');
+      }, 400);
     });
   };
   aboutInit.aboutKonami();
