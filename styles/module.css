@@ -1,33 +1,55 @@
 #inspect-map {
-  height: 400px;
+  height: 350px;
   width: 100%;
-  display: flex;
-  align-self: center;
+  border-top: 10px solid white;
+  border-bottom: 10px solid white;
 }
 
 .low {
   background-color: #009a66;
   padding-bottom: 5px;
 }
-
 .moderate {
   background-color: #3566cd;
   padding-bottom: 5px;
 }
-
 .elevated {
   background-color: #fee101;
   padding-bottom: 5px;
 }
-
 .high {
   background-color: #ff6400;
   padding-bottom: 5px;
 }
-
 .severe {
   background-color: #ca0032;
   padding-bottom: 5px;
+}
+.low img {
+  width: 70px;
+  height: 70px;
+}
+.moderate img {
+  width: 70px;
+  height: 70px;
+}
+.elevated img {
+  width: 70px;
+  height: 70px;
+}
+.high img {
+  width: 70px;
+  height: 70px;
+}
+.severe img {
+  width: 70px;
+  height: 70px;
+}
+
+#view-history {
+  margin-top: 10px;
+  text-decoration: none;
+  border: none;
 }
 
 #inspection-history {

@@ -61,6 +61,10 @@ nav ul li {
   padding-right: 10px;
 }
 
+a {
+  color: #373737
+}
+
 main {
   display: flex;
   flex-direction: column;

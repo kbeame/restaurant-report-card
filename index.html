@@ -14,6 +14,9 @@
 
     <script id="report-card-template" type="text/x-handlebars-template">
       <section class="result-options">
+        <div class="legend-header">
+          <h2>Grading Legend:</h4>
+        </div>
         <ul>
           <li class="low">
             <h2>LOW</h2>
@@ -44,7 +47,8 @@
       </section>
       <section id="results-main">
           <header>
-            <h1>{{name}}'s Inspection Report Card</h1>
+            <h1>Inspection Report Card for:</h1>
+            <h1>{{name}}</h1>
             <ul>
               <li>{{address}}</li>
               <li>{{city}}, WA, {{zip_code}}</li>
@@ -59,7 +63,7 @@
             </div>
           </article>
           <article id="inspect-map"></article>
-          <button><a href="/history">View Full Inspection History</a></button>
+          <button id=view-history><a href="/history">View Full Inspection History</a></button>
       </section>
     </script>
 

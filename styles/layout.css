@@ -2,6 +2,23 @@
   display: flex;
   flex-direction: row;
   border: 10px solid #373737;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.legend-header {
+  display: flex;
+  justify-content: center;
+  background: #373737;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 10px solid white;
+  border-left: 10px solid white;
+  border-right: 10px solid white;
+}
+
+.legend-header h2 {
+  color: white;
 }
 
 .result-options ul {
@@ -30,11 +47,11 @@ img:nth-child(3) {
   height: auto;
 }
 
-#results-main:before {
-  border: 2px solid #373737;
-}
-
 #results-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border-top: 10px solid white;
   border-bottom: 10px solid white;
   border-right: 10px solid white;
