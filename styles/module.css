@@ -6,22 +6,27 @@
 
 .low {
   background-color: #009a66;
+  padding-bottom: 5px;
 }
 
 .moderate {
   background-color: #3566cd;
+  padding-bottom: 5px;
 }
 
 .elevated {
   background-color: #fee101;
+  padding-bottom: 5px;
 }
 
 .high {
   background-color: #ff6400;
+  padding-bottom: 5px;
 }
 
 .severe {
   background-color: #ca0032;
+  padding-bottom: 5px;
 }
 
 #inspection-history {

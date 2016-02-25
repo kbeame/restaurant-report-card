@@ -30,15 +30,19 @@ img:nth-child(3) {
   height: auto;
 }
 
+#results-main:before {
+  border: 2px solid #373737;
+}
+
 #results-main {
-  border: 4px dotted purple;
+  border: 4px solid white;
 }
 
 #results-main header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: inherit;
+  background-color: white;
 }
 #results-main header li {
   list-style-type: none;
