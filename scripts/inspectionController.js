@@ -12,6 +12,7 @@
       historyInit.requestHistoryData(restName);
     });
     Inspection.buildNames(Inspection.inputOptions);
+    $('main').children().hide();
   };
 
   module.inspectionController = inspectionController;
