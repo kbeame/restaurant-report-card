@@ -78,3 +78,17 @@
 #project {
   display: none;
 }
+
+#inspection-history table tbody {
+  width: auto;
+  border: 10px solid #373737
+  padding: 1%;
+}
+#inspection-history table{
+  background-color: white;
+  padding: 1%;
+  border: 10px solid #373737
+}
+#inspection-history table thead {
+  background-color: grey;
+}
