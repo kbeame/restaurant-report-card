@@ -1,16 +1,17 @@
 #report-card{
   display: flex;
   flex-direction: row;
-  border: 3px dotted yellow;
+  border: 10px solid #373737;
 }
 
 .result-options ul {
   margin: 0px;
   padding: 0px;
+  border: 5px solid white;
 }
 .result-options li {
   list-style-type: none;
-  border: 3px dotted blue;
+  border: 5px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;
