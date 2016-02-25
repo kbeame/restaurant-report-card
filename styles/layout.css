@@ -1,16 +1,17 @@
 #report-card{
   display: flex;
   flex-direction: row;
-  border: 3px dotted yellow;
+  border: 10px solid #373737;
 }
 
 .result-options ul {
   margin: 0px;
   padding: 0px;
+  border: 5px solid white;
 }
 .result-options li {
   list-style-type: none;
-  border: 3px dotted blue;
+  border: 5px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,15 +30,21 @@ img:nth-child(3) {
   height: auto;
 }
 
+#results-main:before {
+  border: 2px solid #373737;
+}
+
 #results-main {
-  border: 4px dotted purple;
+  border-top: 10px solid white;
+  border-bottom: 10px solid white;
+  border-right: 10px solid white;
 }
 
 #results-main header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: inherit;
+  background-color: white;
 }
 #results-main header li {
   list-style-type: none;
@@ -48,6 +55,11 @@ img:nth-child(3) {
 }
 .score {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+}
+.score img {
+  height: 100px;
+  width: 100px;
+  margin: 20px 40px 20px 10px;
 }
