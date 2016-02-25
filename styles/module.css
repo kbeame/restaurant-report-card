@@ -79,16 +79,25 @@
   display: none;
 }
 
-#inspection-history table tbody {
+tbody {
   width: auto;
   border: 10px solid #373737
-  padding: 1%;
+  border-collapse: collapse;
+  box-shadow: 0px 0px 10px #373737;
 }
-#inspection-history table{
-  background-color: white;
-  padding: 1%;
-  border: 10px solid #373737
+th, td {
+  padding:7px 10px 10px 10px;
+  border: 1px solid #373737;
+  text-align: center;
 }
-#inspection-history table thead {
-  background-color: grey;
+th {
+  border-bottom: 5px solid #373737;
+  background-color: #373737;
+  color: #e6590c;
+}
+tr {
+  background-color: #838383;
+  border: 2px solid #373737;
+  color: white;
+  text-align: center;
 }
