@@ -1,7 +1,8 @@
 #inspect-map {
   height: 400px;
-  width: 400px;
-  display: none;
+  width: 100%;
+  display: flex;
+  align-self: center;
 }
 
 .low {
