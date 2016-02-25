@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Restaurant Repot Card</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="vendor/style/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700|Crete+Round:400,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="vendor/style/jquery-ui.structure.css">
+    <link rel="stylesheet" type="text/css" href="vendor/style/jquery-ui.theme.css">
+    <link rel="stylesheet" type="text/css" href="styles/base.css">
+    <link rel="stylesheet" type="text/css" href="styles/layout.css">
+    <link rel="stylesheet" type="text/css" href="styles/module.css">
+    <link rel="stylesheet" type="text/css" href="styles/about.css">
+    <!-- seach history handlebars template -->
+    <script id="searches-template" type="text/x-handlebars-template">
+      <tr>
+        <td>{{id}}</td>
+        <td>{{inspection_date}}</td>
+        <td>{{name}}</td>
+        <td>{{inspection_score}}</td>
+        <td>{{address}}</td>
+        <td>{{city}}</td>
+        <td>{{zip_code}}</td>
+      </tr>
+    </script>
+
+  </head>
+  <body>
+    <header>
+      <div class="header-background">
+        <img id="main-logo" src="images/branding/reportcard.png" alt="RestaurantReportCard.org logo" />
+        <h1 id="webapp-title">Restaurant<span class="spacing"> </span>Report<span class="spacing"> </span>Card<span class="spacing"> . </span>org</h1>
+      </div>
+      <div class="nav-block">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="search-history">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Date</th>
+              <th>Name</th>
+              <th>Inspection Score</th>
+              <th>Address</th>
+              <th>City</th>
+              <th>Zip Code</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+  <!-- Vendor Scripts -->
+  <script src="/vendor/scripts/jquery.js"></script>
+  <script src="/vendor/scripts/jquery-ui.js"></script>
+  <script src="/vendor/scripts/handlebars.js"></script>
+  <script src="/vendor/scripts/html5sql.js"></script>
+  <script src="/vendor/scripts/webdb.js"></script>
+  <script src="/vendor/scripts/page.js"></script>
+  <script src="/vendor/scripts/jquery.konami.js" type="text/javascript"></script>
+  <!-- Search History Scripts -->
+  <script src="/scripts/searches.js"></script>
+  <script src="/scripts/searchesView.js"></script>
+  </body>
+</html>
