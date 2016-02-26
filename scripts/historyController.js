@@ -1,7 +1,7 @@
-(function(module){
+(function(module) {
   var historyController = {};
 
-  historyController.index = function () {
+  historyController.index = function() {
     $('#inspection-history').toggle();
   };
 

@@ -4,8 +4,9 @@
       this[element] = options[element];
     },this);
   }
-  Inspection.current =[];
-  Inspection.names =[];
+
+  Inspection.current = [];
+  Inspection.names = [];
 
   Inspection.createTable = function(callback) {
     webDB.execute(
@@ -23,14 +24,14 @@
       callback
     );
   };
-  Inspection.buildNames = function (anything) {
+
+  Inspection.buildNames = function(callback) {
     $.get('/data/resource/gkhn-e8mn.json?$select=name&$group=name&$order=name&$limit=50000')
     .done(function(data, message, xhr) {
       Inspection.names = data.map(function(element){
         return element.name;
       });
-      console.log('generated array for inspeciton.names');
-      anything();
+      callback();
     });
   };
 
@@ -48,39 +49,44 @@
 
   Inspection.requestInspectionData = function(place, callback) {
     $.get('/data/resource/gkhn-e8mn.json?$select=name,inspection_date,inspection_score,address,city,zip_code,phone,latitude,longitude&$order=inspection_date%20DESC&inspection_type=Routine%20Inspection/Field%20Review&$q=' + place + '&$limit=1')
-      .done(function(data, message, xhr) {
-        if (xhr.responseJSON.length === 0) {
-          alert('No Inspection Data Available.');
-        } else {
-          Inspection.current = data;
-          Inspection.current.forEach(function (item) {
-            var total = new Inspection(item);
-            total.inspection_date = total.inspection_date.substring(0, 10);
-            //store search into database
-            total.insertData();
-          });
+    .done(function(data, message, xhr) {
+      if (xhr.responseJSON.length === 0) {
+        alert('No Inspection Data Available.');
+      } else {
+        Inspection.current = data;
 
-          $('#report-card').empty().append(inspectionView.displayResults(Inspection.current[0])).show().siblings().hide();
-          inspectionView.filterResults(Inspection.current[0]);
-          mapView.updateMap();
-          history.replaceState(null, null, 'report-card');
-        }
-      }).done(callback);
+        Inspection.current.forEach(function(item) {
+          var total = new Inspection(item);
+          total.inspection_date = total.inspection_date.substring(0, 10);
+          //store search into database
+          total.insertData();
+        });
+
+        $('#report-card').empty()
+        .append(inspectionView.displayResults(Inspection.current[0]))
+        .show().siblings().hide();
+
+        inspectionView.filterResults(Inspection.current[0]);
+        mapView.updateMap();
+        history.replaceState(null, null, 'report-card');
+      }
+    })
+    .done(callback);
   };
 
   Inspection.with = function(attr) {
-    console.log('inspection function');
-    return Inspection.current.filter(function(inspection){
+    return Inspection.current.filter(function(inspection) {
       return inspection[attr];
-      console.log(Inspection.current);
     });
   };
 
   Inspection.inputOptions = function() {
-    $('#search-input').autocomplete({
-      source: Inspection.names,
-      minLength: 3
-    });
+    $('#search-input').autocomplete(
+      {
+        source: Inspection.names,
+        minLength: 3
+      }
+    );
   };
 
   module.Inspection = Inspection;

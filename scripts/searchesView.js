@@ -3,7 +3,6 @@
 
   searchesView.displaySearchRow = function(result) {
     var template = Handlebars.compile($('#searches-template').text());
-
     return template(result);
   };
 
