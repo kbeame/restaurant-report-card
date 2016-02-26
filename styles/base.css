@@ -34,7 +34,6 @@ header {
     font-family: 'Crete Round', serif;
     font-size: 1.5em;
     letter-spacing: 3px;
-    /*background: rgba(0, 0, 0, 0.2);*/
 }
 
 .spacing {
@@ -63,13 +62,6 @@ nav ul li {
 
 a {
   color: #373737
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .about-blurb-container {
@@ -103,7 +95,6 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-
 }
 
 form input {
@@ -121,6 +112,7 @@ form input {
 }
 
 @media only screen and (max-width: 940px) {
+
   header {
     display: flex;
     flex-direction: column;
@@ -129,6 +121,7 @@ form input {
     max-width: 100%;
     background: #373737;
   }
+
   .nav-block {
     display: flex;
     align-items: center;
@@ -137,16 +130,19 @@ form input {
     width: 100%;
     height: 30px;
   }
+
   .about-blurb-container {
     height: 90px;
     max-width: 100%;
   }
+
   .about-blurb-container h1 {
     font-size: 1.2em;
   }
 }
 
 @media only screen and (max-width: 450px) {
+
   body {
     max-width: 100%;
     font-family: 'Maven Pro', sans-serif;
@@ -156,6 +152,7 @@ form input {
     -o-background-size: cover;
     background-size: cover;
   }
+
   header {
     display: flex;
     flex-direction: column;
@@ -164,11 +161,13 @@ form input {
     max-width: 100%;
     background: #373737;
   }
+
   .header-background {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   #main-logo {
     max-width: 70px;
     max-height: 90px;
@@ -181,8 +180,8 @@ form input {
       font-family: 'Crete Round', serif;
       font-size: 1em;
       letter-spacing: 3px;
-      /*background: rgba(0, 0, 0, 0.2);*/
   }
+
   .nav-block {
     display: flex;
     align-items: center;
@@ -191,12 +190,14 @@ form input {
     width: 100%;
     height: 100px;
   }
+
   nav ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     list-style: none;
   }
+
   nav ul li {
     align-content: center;
     padding-left: 10px;
@@ -204,10 +205,12 @@ form input {
     font-size: 1.5em;
     font-weight: 600;
   }
+  
   .about-blurb-container {
     height: 40px;
     max-width: 100%;
   }
+
   .about-blurb-container h1 {
     font-size: 1em;
   }
@@ -221,7 +224,6 @@ form input {
     height: 98px;
     background: white;
     padding-top: 8px;
-
   }
 
   form input {

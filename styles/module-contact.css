@@ -28,12 +28,14 @@
   align-items: center;
   margin-bottom: 2%;
 }
+
 #contact a {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 80%;
 }
+
 #contact div {
   text-align: center;
   width: 100%;

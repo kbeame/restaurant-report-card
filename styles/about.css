@@ -24,6 +24,7 @@
   -o-transition: 3s ease-in-out;
   transition: 3s ease-in-out;
 }
+
 .slide-down {
   -webkit-transform: translate(0,350px);
   -moz-transform: translate(0,350px);
