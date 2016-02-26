@@ -1,1 +1,51 @@
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #373737;
+  margin: 4%;
+  width: 100%;
+}
+.info h1 {
+  margin-bottom: 15px;
+  font-family: 'Maven Pro', sans-serif; font-weight: 400;
+  text-align: center;
+  color: white;
+}
+#about h2 {
+background-color: #373737;
+color: #e6590c;
+font-family: 'Crete Round', serif;
+letter-spacing: 3px;
+margin: auto;
+}
 
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.info article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  box-shadow: 0px 0px 10px #373737;
+  height: 300px;
+  margin: 2%;
+  min-width: 300px;
+  background-color: #838383;
+}
+
+.info article p {
+  font-family: 'Maven Pro', sans-serif; font-weight: 400;
+  text-align: center;
+  color: white;
+  list-style-type: none;
+  margin: 1%;
+}
