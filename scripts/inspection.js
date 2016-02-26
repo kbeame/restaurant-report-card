@@ -69,9 +69,9 @@
         inspectionView.filterResults(Inspection.current[0]);
         mapView.updateMap();
         history.replaceState(null, null, 'report-card');
+        callback();
       }
-    })
-    .done(callback);
+    });
   };
 
   Inspection.with = function(attr) {
