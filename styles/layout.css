@@ -1,3 +1,10 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/*report card styling */
 #report-card{
   display: flex;
   flex-direction: row;
@@ -30,6 +37,7 @@
   padding: 0px;
   border: 5px solid white;
 }
+
 .result-options li {
   list-style-type: none;
   border: 5px solid white;
@@ -38,13 +46,16 @@
   align-items: center;
   margin: auto;
 }
+
 h2:nth-child(1) {
   margin: auto;
 }
+
 h4:nth-child(2) {
   margin: auto;
   padding: auto;
 }
+
 img:nth-child(3) {
   display: block;
   width: auto;
@@ -67,26 +78,31 @@ img:nth-child(3) {
   align-items: center;
   background-color: white;
 }
+
 #results-main header li {
   list-style-type: none;
 }
+
 #results-main header h1 {
   margin-bottom: auto;
   margin-top: auto;
   text-align: center;
 }
+
 .score {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .score img {
   height: 100px;
   width: 100px;
   margin: 20px 40px 20px 10px;
 }
-
+/*report car media queries*/
 @media only screen and (max-width: 790px) {
+
   #results-main header h1 {
     margin-bottom: auto;
     margin-top: auto;
@@ -95,9 +111,11 @@ img:nth-child(3) {
 }
 
 @media only screen and (max-width: 450px) {
+
   .legend-header {
     display: none;
   }
+
   .legend-header-mobile {
     display: flex;
     justify-content: center;
@@ -106,16 +124,20 @@ img:nth-child(3) {
     padding-bottom: 20px;
     border: 10px solid white;
   }
+
   .legend-header-mobile h2 {
     color: white;
     font-size: 1.2em;
   }
+
   .legend-header-mobile:hover + #grading-legend-list {
     display: block;
   }
+
   #grading-legend-list {
     display: none
   }
+
   #report-card{
     display: flex;
     flex-direction: column-reverse;
@@ -123,6 +145,7 @@ img:nth-child(3) {
     margin-top: 15px;
     margin-bottom: 15px;
   }
+
   #results-main {
     display: flex;
     flex-direction: column;
@@ -130,6 +153,7 @@ img:nth-child(3) {
     justify-content: center;
     border: 10px solid white;
   }
+  
   #results-main header h1 {
     margin-bottom: auto;
     margin-top: auto;
