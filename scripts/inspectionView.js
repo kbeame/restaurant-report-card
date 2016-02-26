@@ -5,7 +5,7 @@
     var template = Handlebars.compile($('#report-card-template').text());
     return template(inspection);
   };
-  
+
   inspectionView.filterResults = function(result) {
     if (result.inspection_score <= 5) {
       $('#results-main').attr('class', 'low');

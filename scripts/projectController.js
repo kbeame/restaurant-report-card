@@ -1,8 +1,9 @@
-(function(module){
+(function(module) {
   var projectController = {};
 
-  projectController.index= function() {
+  projectController.index = function() {
     $('#project').show().siblings().hide();
   };
+
   module.projectController = projectController;
 })(window);
