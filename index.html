@@ -18,9 +18,12 @@
     <script id="report-card-template" type="text/x-handlebars-template">
       <section class="result-options">
         <div class="legend-header">
-          <h2>Grading Legend:</h4>
+          <h2>Grading Legend:</h2>
         </div>
-        <ul>
+        <div class="legend-header-mobile">
+          <h2>Tap to see grading legend</h2>
+        </div>
+        <ul id="grading-legend-list">
           <li class="low">
             <h2>LOW</h2>
             <h4>Low risk of food contamination</h4>
