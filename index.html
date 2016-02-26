@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="styles/module-contact.css">
     <link rel="stylesheet" type="text/css" href="styles/module-project.css">
     <link rel="stylesheet" type="text/css" href="styles/about.css">
-
+    <!-- report card handlebars template -->
     <script id="report-card-template" type="text/x-handlebars-template">
       <section class="result-options">
         <div class="legend-header">
@@ -72,7 +72,7 @@
           <button id=view-history><a href="/history">View Full Inspection History</a></button>
       </section>
     </script>
-
+    <!-- inspection history handlebars template -->
     <script id="history-template" type="text/x-handlebars-template">
       <tr>
         <td>{{inspection_date}}</td>
@@ -148,12 +148,10 @@
         <h3>Food Safety Importance:</h3>
         <p>
           If you have ever come down with food poisoning you have first hand understanding of the importance of trying to prevent the food contamination. e population). What may just be an uncomfortable night worshiping the ceramic bowl to you can, especially in at risk populations of children and the elderly, cause serious medical difficulties. In the United States food-borne illness contributes to 128,000 hospitalizations and 3,000 deaths. The tragedy of these numbers is only heightened by the fact that they are largely preventable. Illness caused by food borne pathogens can be prevented with safe food handling procedures.
-
         </p>
         <h3>What Report Card Aims to Accomplish:</h3>
         <p>
           Our app’s purpose is to make food safety a consideration when making your dining decision. Just as you might check Yelp Reviews to check your potential dining experience in a restaurant, if food safety is an important consideration to you our app allows you to easily look up any restaurant within King County. We have simplified the information so that it quickly and easily informs you of the risk for contracting a food borne illness at the restaurant based on the restaurant’s most recent food inspection.
-
         </p>
         <h3>King County Inspection Process:</h3>
         <p>
@@ -179,7 +177,7 @@
         </article>
         <article>
           <h1>Ben</h1>
-          <img  class="moderate" src="images/inspection-grade-png/doodle-smiley-icons-b-plus.png">
+          <img class="moderate" src="images/inspection-grade-png/doodle-smiley-icons-b-plus.png">
           <p>Favorite Restaurant:</p>
           <p>Tippe and Drague Alehouse</p>
           <p>Inspection Score:</p>
@@ -197,7 +195,7 @@
       </section>
       </section>
     </main>
-  <!-- Vendor Scripts -->
+  <!-- vendor scripts -->
   <script src="/vendor/scripts/jquery.js"></script>
   <script src="/vendor/scripts/jquery-ui.js"></script>
   <script src="/vendor/scripts/handlebars.js"></script>
@@ -224,7 +222,7 @@
   <script src="/scripts/contactController.js"></script>
   <!-- routes -->
   <script src="/scripts/routes.js"></script>
-  <!-- Google Maps API -->
+  <!-- google maps API -->
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?&callback=mapInspection.initMap">
   </script>
