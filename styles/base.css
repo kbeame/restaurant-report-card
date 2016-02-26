@@ -113,18 +113,11 @@ form input {
 }
 
 .search-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: #e6590c;
   height: 40px;
   width: 80px;
   border: 0px;
   font-weight: 600;
-}
-
-.search-button p {
-  font-weight: 800;
 }
 
 @media only screen and (max-width: 940px) {
@@ -256,9 +249,5 @@ form input {
     border: 0px;
     margin-top: 3px;
     font-weight: 600;
-  }
-
-  .search-button p {
-    font-weight: 800;
   }
 }
