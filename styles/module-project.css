@@ -38,3 +38,24 @@
   text-indent: 30px;
   margin: 1%;
 }
+
+#project a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+#project div {
+  text-align: center;
+  width: 100%;
+  background-color: #373737;
+  color: #e6590c;
+  font-family: 'Crete Round', serif;
+  letter-spacing: 3px;
+  border-radius: 15px;
+  padding: 2%;
+  margin: 1%;
+  border: 3px solid #e6590c;
+  box-shadow: 0px 0px 10px #373737;
+}
