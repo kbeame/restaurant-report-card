@@ -52,6 +52,8 @@
     .done(function(data, message, xhr) {
       if (xhr.responseJSON.length === 0) {
         alert('No Inspection Data Available.');
+      } else if (place === ''){
+        alert('Please enter a valid establishment name.');
       } else {
         Inspection.current = data;
 
@@ -69,6 +71,7 @@
         inspectionView.filterResults(Inspection.current[0]);
         mapView.updateMap();
         history.replaceState(null, null, 'report-card');
+        $('#search-input').val('');
         callback();
       }
     });
