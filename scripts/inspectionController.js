@@ -9,12 +9,10 @@
     $('.restaurant-search').on('submit', function(event) {
       event.preventDefault();
       var restName = $('#search-input').val();
-      console.log('restName ' + restName);
       restName = restName.replace(/[^\w\s]/gi, '+');
 
       Inspection.requestInspectionData(restName, Inspection.with);
       historyInit.requestHistoryData(restName);
-      // $('#search-input').val('');
     });
 
     Inspection.buildNames(Inspection.inputOptions);

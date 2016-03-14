@@ -48,33 +48,40 @@
   };
 
   Inspection.requestInspectionData = function(place, callback) {
-    $.get('/data/resource/gkhn-e8mn.json?$select=name,inspection_date,inspection_score,address,city,zip_code,phone,latitude,longitude&$order=inspection_date%20DESC&inspection_type=Routine%20Inspection/Field%20Review&$q=' + place + '&$limit=1')
-    .done(function(data, message, xhr) {
-      if (xhr.responseJSON.length === 0) {
-        alert('No Inspection Data Available.');
-      } else if (place === ''){
-        alert('Please enter a valid establishment name.');
-      } else {
-        Inspection.current = data;
+    if (place === '') {
+      alert('Please enter a valid establishment name.');
+      $('#search-input').val('');
+    } else if (place.substring(0, 1) === ' ') {
+      alert('Please enter a valid establishment name.');
+      $('#search-input').val('');
+    } else {
+      $.get('/data/resource/gkhn-e8mn.json?$select=name,inspection_date,inspection_score,address,city,zip_code,phone,latitude,longitude&$order=inspection_date%20DESC&inspection_type=Routine%20Inspection/Field%20Review&$q=' + place + '&$limit=1')
+      .done(function(data, message, xhr) {
+        if (xhr.responseJSON.length === 0) {
+          alert('No Inspection Data Available.');
+          $('#search-input').val('');
+        } else {
+          Inspection.current = data;
 
-        Inspection.current.forEach(function(item) {
-          var total = new Inspection(item);
-          total.inspection_date = total.inspection_date.substring(0, 10);
-          //store search into database
-          total.insertData();
-        });
+          Inspection.current.forEach(function(item) {
+            var total = new Inspection(item);
+            total.inspection_date = total.inspection_date.substring(0, 10);
+            //store search into database
+            total.insertData();
+          });
 
-        $('#report-card').empty()
-        .append(inspectionView.displayResults(Inspection.current[0]))
-        .show().siblings().hide();
+          $('#report-card').empty()
+          .append(inspectionView.displayResults(Inspection.current[0]))
+          .show().siblings().hide();
 
-        inspectionView.filterResults(Inspection.current[0]);
-        mapView.updateMap();
-        history.replaceState(null, null, 'report-card');
-        $('#search-input').val('');
-        callback();
-      }
-    });
+          inspectionView.filterResults(Inspection.current[0]);
+          mapView.updateMap();
+          history.replaceState(null, null, 'report-card');
+          $('#search-input').val('');
+          callback();
+        }
+      });
+    }
   };
 
   Inspection.with = function(attr) {
