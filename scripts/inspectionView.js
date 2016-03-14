@@ -7,7 +7,7 @@
   };
 
   inspectionView.filterResults = function(result) {
-    if (result.inspection_score <= 5) {
+    if (result.inspection_score <= 10) {
       $('#results-main').attr('class', 'low');
       $('.score img').attr('src', 'images/inspection-grade-png/doodle-smiley-icons-a.png');
     } else if (result.inspection_score <= 35) {
