@@ -77,7 +77,7 @@
 
           inspectionView.filterResults(Inspection.current[0]);
           mapView.updateMap();
-          history.replaceState(null, null, place);
+          history.pushState(null, null, '../reportcard/' + place);
           $('#search-input').val('');
           callback();
         }
