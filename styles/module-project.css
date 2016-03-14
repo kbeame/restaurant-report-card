@@ -10,6 +10,7 @@
 }
 
 #project img {
+  display: none;
   background-color: white;
   border: 1px;
   margin: 2%;
