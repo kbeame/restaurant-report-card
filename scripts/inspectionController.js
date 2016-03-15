@@ -4,8 +4,6 @@
   inspectionController.index = function() {
     $('main').children().hide();
 
-    Inspection.createTable();
-
     $('.restaurant-search').on('submit', function(event) {
       event.preventDefault();
       var restName = $('#search-input').val();
@@ -15,7 +13,6 @@
       historyInit.requestHistoryData(restName);
     });
 
-    Inspection.buildNames(Inspection.inputOptions);
     $('#search-input').focus();
   };
 

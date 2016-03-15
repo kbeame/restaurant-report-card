@@ -25,6 +25,15 @@
     );
   };
 
+  Inspection.inputOptions = function() {
+    $('#search-input').autocomplete(
+      {
+        source: Inspection.names,
+        minLength: 3
+      }
+    );
+  };
+
   Inspection.buildNames = function(callback) {
     $.get('/data/resource/gkhn-e8mn.json?$select=name&$group=name&$order=name&$limit=50000')
     .done(function(data, message, xhr) {
@@ -91,14 +100,8 @@
     });
   };
 
-  Inspection.inputOptions = function() {
-    $('#search-input').autocomplete(
-      {
-        source: Inspection.names,
-        minLength: 3
-      }
-    );
-  };
+  Inspection.createTable();
+  Inspection.buildNames(Inspection.inputOptions);
 
   module.Inspection = Inspection;
 })(window);
