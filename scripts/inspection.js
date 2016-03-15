@@ -85,7 +85,7 @@
 
           inspectionView.filterResults(Inspection.current);
           mapView.updateMap(Inspection.current);
-          history.replaceState(null, null, '../reportcard/' + place);
+          history.pushState(null, null, '../reportcard/' + place);
           $('#search-input').val('');
           callback();
         }
