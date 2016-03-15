@@ -25,6 +25,15 @@
     );
   };
 
+  Inspection.inputOptions = function() {
+    $('#search-input').autocomplete(
+      {
+        source: Inspection.names,
+        minLength: 3
+      }
+    );
+  };
+
   Inspection.buildNames = function(callback) {
     $.get('/data/resource/gkhn-e8mn.json?$select=name&$group=name&$order=name&$limit=50000')
     .done(function(data, message, xhr) {
@@ -56,27 +65,26 @@
       $('#search-input').val('');
     }
     else {
-      $.get('/data/resource/gkhn-e8mn.json?$select=name,inspection_date,inspection_score,address,city,zip_code,phone,latitude,longitude&$order=inspection_date%20DESC&inspection_type=Routine%20Inspection/Field%20Review&$q=' + place + '&$limit=1')
+      $.get('/data/resource/gkhn-e8mn.json?$select=name,inspection_date,inspection_score,address,city,zip_code,phone,latitude,longitude,violation_description&$order=inspection_date%20DESC&inspection_type=Routine%20Inspection/Field%20Review&$q=' + place)
       .done(function(data, message, xhr) {
         if (xhr.responseJSON.length === 0) {
           alert('No Inspection Data Available.');
           $('#search-input').val('');
         }
         else {
-          Inspection.current = data;
-          Inspection.current.forEach(function(item) {
-            var total = new Inspection(item);
-            total.inspection_date = total.inspection_date.substring(0, 10);
-            //store search into database
-            total.insertData();
-          });
+          historyInit.all = data;
+
+          Inspection.current = new Inspection(data[0]);
+          Inspection.current.inspection_date = Inspection.current.inspection_date.substring(0, 10);
+          //store search into database
+          Inspection.current.insertData();
 
           $('#report-card').empty()
-          .append(inspectionView.displayResults(Inspection.current[0]))
+          .append(inspectionView.displayResults(Inspection.current))
           .show().siblings().hide();
 
-          inspectionView.filterResults(Inspection.current[0]);
-          mapView.updateMap();
+          inspectionView.filterResults(Inspection.current);
+          mapView.updateMap(Inspection.current);
           history.pushState(null, null, '../reportcard/' + place);
           $('#search-input').val('');
           callback();
@@ -86,19 +94,11 @@
   };
 
   Inspection.with = function(attr) {
-    return Inspection.current.filter(function(inspection) {
-      return inspection[attr];
-    });
+    return Inspection.current[attr];
   };
 
-  Inspection.inputOptions = function() {
-    $('#search-input').autocomplete(
-      {
-        source: Inspection.names,
-        minLength: 3
-      }
-    );
-  };
+  Inspection.createTable();
+  Inspection.buildNames(Inspection.inputOptions);
 
   module.Inspection = Inspection;
 })(window);

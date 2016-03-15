@@ -2,8 +2,12 @@
   var historyController = {};
 
   historyController.index = function() {
-    $('#inspection-history').toggle();
+    $('main').on('click', '#view-history', function() {
+      $('#inspection-history').toggle();
+      historyInit.requestHistoryData();
+    });
   };
+  historyController.index();
 
   module.historyController = historyController;
 })(window);
