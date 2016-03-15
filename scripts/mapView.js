@@ -1,11 +1,11 @@
 (function(module) {
   var mapView = {};
 
-  mapView.updateMap = function() {
+  mapView.updateMap = function(current) {
     $('#inspect-map').show();
     mapInspection.initMap();
 
-    var inspectionLatLong = {lat: parseFloat(Inspection.current[0].latitude), lng: parseFloat(Inspection.current[0].longitude)};
+    var inspectionLatLong = {lat: parseFloat(current.latitude), lng: parseFloat(current.longitude)};
     mapInspection.map.setCenter(inspectionLatLong);
     mapInspection.map.setZoom(17);
 
@@ -13,7 +13,7 @@
       {
         position: inspectionLatLong,
         map: mapInspection.map,
-        title: Inspection.current[0].name
+        title: current.name
       }
     );
   };

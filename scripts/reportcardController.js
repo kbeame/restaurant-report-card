@@ -7,5 +7,6 @@
 
     historyInit.requestHistoryData(ctx.params.establishment);
   };
+  
   module.reportcardController = reportcardController;
 })(window);
