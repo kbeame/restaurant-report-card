@@ -3,6 +3,8 @@
 #Date Started: Feb 19th 2016
 Purpose: Help the public inform their dining decisions based on King County inspection history.
 
+## Deployed at: https://restaurant-report-card.herokuapp.com/
+
 ##Vendors Used
 Konami plugin by Tommy McFarlin: https://github.com/tommcfarlin/konami-code
 Handlebars
