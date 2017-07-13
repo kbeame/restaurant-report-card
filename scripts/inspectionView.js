@@ -7,16 +7,16 @@
   };
 
   inspectionView.filterResults = function(result) {
-    if (result.inspection_score <= 10) {
+    if (result.inspection_score < 10) {
       $('#results-main').attr('class', 'low');
       $('.score img').attr('src', '/images/inspection-grade-png/doodle-smiley-icons-a.png');
-    } else if (result.inspection_score <= 35) {
+    } else if (result.inspection_score < 35) {
       $('#results-main').attr('class', 'moderate');
       $('.score img').attr('src', '/images/inspection-grade-png/doodle-smiley-icons-b-plus.png');
-    } else if (result.inspection_score <= 45) {
+    } else if (result.inspection_score < 45) {
       $('#results-main').attr('class', 'elevated');
       $('.score img').attr('src', '/images/inspection-grade-png/doodle-smiley-icons-b.png');
-    } else if (result.inspection_score <= 90) {
+    } else if (result.inspection_score < 90) {
       $('#results-main').attr('class', 'high');
       $('.score img').attr('src', '/images/inspection-grade-png/doodle-smiley-icons-c.png');
     } else {
